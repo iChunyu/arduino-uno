@@ -7,7 +7,6 @@
 - Ardunio 编程的基本结构：
     [`setup()`](https://www.arduino.cc/reference/en/language/structure/sketch/setup/)、
     [`loop()`](https://www.arduino.cc/reference/en/language/structure/sketch/loop/)；
-
 - 串口设置与输出：
     [`Serial.begin()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/)、
     [`Serial.print()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/)、

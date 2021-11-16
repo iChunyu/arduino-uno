@@ -22,7 +22,7 @@ void loop() {
   }
   
   turnLED += 1;
-  if (turnLED >= 3) {
+  if (turnLED >= pinNum) {
     turnLED = 0;
   }
 

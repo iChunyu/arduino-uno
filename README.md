@@ -20,3 +20,8 @@
     [`[constants]`](https://www.arduino.cc/reference/en/language/variables/constants/constants/)、
     [`pinMode()`](https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/)、
     [`digitalWrite()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/)。
+
+3. [点亮外部 LED](./03_ExternalLED/README.md)
+    
+    [`for`](https://www.arduino.cc/reference/en/language/structure/control-structure/for/)、
+    [`if`](https://www.arduino.cc/reference/en/language/structure/control-structure/if/)。

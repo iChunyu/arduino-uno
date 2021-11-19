@@ -25,3 +25,10 @@
     
     [`for`](https://www.arduino.cc/reference/en/language/structure/control-structure/for/)、
     [`if`](https://www.arduino.cc/reference/en/language/structure/control-structure/if/)。
+
+4. [串口控制 LED](./04_ControlLED/README.md)
+
+    [`[array]`](https://www.arduino.cc/reference/en/language/variables/data-types/array/)、
+    [`sizeof`](https://www.arduino.cc/reference/en/language/variables/utilities/sizeof/)、
+    [`else`](https://www.arduino.cc/reference/en/language/structure/control-structure/else/)、
+    [`Serial.read()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/read/)。

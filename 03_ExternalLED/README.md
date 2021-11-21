@@ -20,7 +20,7 @@
 将外部 LED 的正极（引线长的那一头）接到 Arduino 数字输出口，负极通过 220 Ω 电阻接地，如下图所示。
 
 <div align=center>
-    <img src=./ExternalLED.svg width=300 />
+    <img src=./ExternalLED.svg width=50% />
 </div>
 
 **注意**：本次示例请将 LED 接入连续的三个数字口以方便轮询。例如上图三个 LED 分别接入 7、8、9 号端口，可以将 7 作为引脚基准（`pinBase`），0、1、2 为 LED 的编号。记需要点亮（turn on）的 LED 编号为 `turnLED` ，则其引脚为 `pinBase + turnLED`。

@@ -1,6 +1,6 @@
 # 04 串口控制 LED
 
-LED 的控制权还是应答在自己手里，那就来试试手动点亮吧～
+LED 的控制权还是应当在自己手里，那就来试试手动点亮吧～
 
 在本示例中，我们将了解：
 
@@ -23,7 +23,7 @@ LED 的控制权还是应答在自己手里，那就来试试手动点亮吧～
 这次可以偷懒，继承 [点亮外部 LED](../03_ExternalLED/README.md) 的布局，如下图所示。
 
 <div align=center>
-    <img src=./ControlLED.svg width=300 />
+    <img src=./ControlLED.svg width=50% />
 </div>
 
 

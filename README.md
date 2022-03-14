@@ -36,3 +36,7 @@
 5. [LED 呼吸灯](./05_BreathLED/README.md)
 
     [`analogWrite()`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/)。
+
+11. [ADC 模数转化](./11_ADC/REAFME.md)
+
+    [`analogRead()`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/)。

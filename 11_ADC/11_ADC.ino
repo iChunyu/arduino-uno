@@ -9,17 +9,17 @@
 
 int PWMPin = 5;
 int ADCPin = A0;
-double Vmax = 5;          // [V] VCC
-double T = 100;           // [ms] Time unit (ADC sampling period)
-double PWMScale = pow(2, 8) / Vmax;
-double ADCScale = Vmax / pow(2, 10);
+double Vmax = 5;                            // [V] VCC
+double T = 100;                             // [ms] Time unit (ADC sampling period)
+double PWMScale = pow(2, 8) / Vmax;         // Desired voltage to DAC(PWM) code
+double ADCScale = Vmax / pow(2, 10);        // ADC code to measured voltage
 
 // Sine wave
 const double pi = 3.14159265358979323846264338327;            // http://www.geom.uiuc.edu/~huberty/math5337/groupe/digits.html
-double A = 2;           // [V] Amplitude
-double b = 2.5;           // [V] Bias: b - A >= 0 && b + A <= Vmax
-double f = 0.1;          // [Hz] Frequency
-double Omega = 2 * pi * f * T * 1e-3;             // Digital frequency
+double A = 2;                               // [V] Amplitude
+double b = 2.5;                             // [V] Bias: b - A >= 0 && b + A <= Vmax
+double f = 0.1;                             // [Hz] Frequency
+double Omega = 2 * pi * f * T * 1e-3;       // Digital frequency
 
 int n = 0;
 double Vref;
@@ -27,7 +27,7 @@ double Vout;
 double Vin;
 double Verr;
 
-bool isOpen = true;         // chose 'DAC' works in open-loop or closed-loop (noise shaping)
+bool isOpen = true;                         // chose 'DAC(PWM)' works in open-loop or closed-loop (noise shaping)
 double Kp = 0.3;
 double Ki = 0.6;
 double xc = 0;
@@ -51,7 +51,6 @@ void loop() {
     Verr = Vref - Vin;
     xc += Verr;
     Vout = Kp * Verr + Ki * xc;
-
   }
 
   analogWrite(PWMPin, int(Vout * PWMScale));

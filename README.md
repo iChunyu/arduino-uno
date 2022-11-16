@@ -4,9 +4,11 @@
 
 原理图可以在 [官方网站](https://content.arduino.cc/assets/UNO-TH_Rev3e_sch.pdf) 下载。 -->
 
-> 此处应有开场白，但这个人太懒，被他糊弄过去了。
+本仓库简要记录 Arduino 的学习与折腾记录。
 
-1. [Hello World！](./01_HelloWorld/README.md)
+下面的目录列出了已经调试过的测试用例以及用例所涉及的核心内容。
+
+1. [Hello World](./01_HelloWorld/README.md)
 
     [`setup()`](https://www.arduino.cc/reference/en/language/structure/sketch/setup/)、
     [`loop()`](https://www.arduino.cc/reference/en/language/structure/sketch/loop/)、
@@ -16,13 +18,13 @@
     [`delay()`](https://www.arduino.cc/reference/en/language/functions/time/delay/)。
 
 2. [点亮内置 LED](./02_BuiltinLED/README.md)
-    
+
     [`[constants]`](https://www.arduino.cc/reference/en/language/variables/constants/constants/)、
     [`pinMode()`](https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/)、
     [`digitalWrite()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/)。
 
 3. [点亮外部 LED](./03_ExternalLED/README.md)
-    
+
     [`for`](https://www.arduino.cc/reference/en/language/structure/control-structure/for/)、
     [`if`](https://www.arduino.cc/reference/en/language/structure/control-structure/if/)。
 
@@ -36,6 +38,10 @@
 5. [LED 呼吸灯](./05_BreathLED/README.md)
 
     [`analogWrite()`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/)。
+
+9. [超声波距离传感器](./09_DistancetSensor/REAFME.md)
+
+    调用外部库 [`NewPing`](https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home)
 
 11. [ADC 模数转化](./11_ADC/REAFME.md)
 

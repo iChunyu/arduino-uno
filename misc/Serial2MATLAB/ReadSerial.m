@@ -1,17 +1,23 @@
+% Read serial data from Arduino and plot data
+
+% XiaoCY 2023-03-07
+
+%%
 clear;clc
 
-s = serialport('/dev/ttyUSB0', 9600);
-
+% use `serialportlist` to see serial list
+s = serialport('/dev/ttyACM0', 9600);
 fs = 1/20e-3;
+
 filename = 'testdata.dat';
-Time = 10;
-Tfft = 3;
+save_time = 10;         % time length of data to be saved
+fft_time = 3;           % time length of data to perform `fft`
 
 %%
 fid = fopen(filename,'w');
 
 % for FFT
-nfft = Tfft*fs;
+nfft = fft_time*fs;
 data = nan(nfft,1);
 N1 = floor(nfft/2);
 f = fs/nfft*(1:N1-1)';
@@ -27,10 +33,13 @@ subplot(212)
 box on
 grid on
 
-flush(s);
-for k = 1:Time*fs
+while s.NumBytesAvailable > 0
+    s.flush
+end
+for k = 1:save_time*fs
     subplot(211)
-    x = eval(s.readline);
+    x = eval(s.read(18,'char'));    % use `Serial.print` in arduino
+    % x = eval(s.readline);         % use `Serial.println` in arduino
     fprintf(fid, '%s    %+16.13f\n',datestr(now,'yyyy-mm-dd HH:MM:ss.FFF'),x);
     addpoints(an,(k-1)/fs,x)
     drawnow
@@ -53,3 +62,4 @@ for k = 1:Time*fs
 end
 
 fclose(fid);
+delete(s);
